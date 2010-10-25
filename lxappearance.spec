@@ -1,11 +1,11 @@
 Summary:	Desktop-independent theme switcher for GTK+
 Name:		lxappearance
-Version:	0.4.0
+Version:	0.5.0
 Release:	1
 License:	GPL v3
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/lxde/%{name}-%{version}.tar.gz
-# Source0-md5:	751426a9c4b6090b9fabb8dde593c50a
+# Source0-md5:	7eabab6f4a358dbc6a84e260a0e7f6c2
 URL:		http://wiki.lxde.org/en/LXAppearance
 BuildRequires:	gettext-devel
 BuildRequires:	gtk+2-devel >= 2:2.12.0
@@ -16,6 +16,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 LXAppearance is part of LXDE project. It's a desktop-independent theme
 switcher for GTK+.
+
+%package devel
+Summary:	Header files for lxappearance
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+
+%description devel
+Header files for lxappearance.
 
 %prep
 %setup -q
@@ -43,4 +51,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/lxappearance
 %{_desktopdir}/lxappearance.desktop
 %{_datadir}/lxappearance
-%{_mandir}/man1/lxappearance*
+
+%files devel
+%defattr(644,root,root,755)
+%dir %{_includedir}/lxappearance
+%{_includedir}/lxappearance/lxappearance.h
+%{_pkgconfigdir}/lxappearance.pc
