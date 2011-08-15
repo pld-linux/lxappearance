@@ -10,7 +10,7 @@
 Summary:	Desktop-independent theme switcher for GTK+
 Name:		lxappearance
 Version:	0.5.1
-Release:	2
+Release:	3
 License:	GPL v3
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/lxde/%{name}-%{version}.tar.gz
@@ -48,6 +48,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT%{_libdir}/lxappearance/plugins
+
 %{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/tt_RU
 
 %find_lang %{name}
@@ -59,6 +61,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS README
 %attr(755,root,root) %{_bindir}/lxappearance
+%dir %{_libdir}/lxappearance
+%dir %{_libdir}/lxappearance/plugins
 %{_mandir}/man1/lxappearance.1*
 %{_desktopdir}/lxappearance.desktop
 %{_datadir}/lxappearance
