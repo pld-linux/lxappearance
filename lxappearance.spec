@@ -9,12 +9,12 @@
 
 Summary:	Desktop-independent theme switcher for GTK+
 Name:		lxappearance
-Version:	0.5.1
-Release:	3
+Version:	0.5.2
+Release:	1
 License:	GPL v3
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/lxde/%{name}-%{version}.tar.gz
-# Source0-md5:	34d157a7fe97ef0b93db8fab3f251e07
+# Source0-md5:	a088c6ef08fd25df7dc3be5b07168bbe
 URL:		http://wiki.lxde.org/en/LXAppearance
 BuildRequires:	gettext-devel
 %{?with_gtk2:BuildRequires:	gtk+2-devel >= 2:2.12.0}
@@ -41,7 +41,7 @@ Header files for lxappearance.
 %build
 %configure \
 	%{?with_gtk3:--enable-gtk3}
-%{__make}
+%{__make} V=1
 
 %install
 rm -rf $RPM_BUILD_ROOT
