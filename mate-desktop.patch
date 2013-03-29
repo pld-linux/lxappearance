@@ -1,0 +1,10 @@
+--- lxappearance-0.5.2/./data/lxappearance.desktop~	2012-05-20 17:30:13.000000000 +0300
++++ lxappearance-0.5.2/./data/lxappearance.desktop	2013-03-29 22:56:50.156462788 +0200
+@@ -136,6 +136,6 @@
+ Comment[zh_TW]=自訂桌面和應用程式的外觀風格
+ Icon=preferences-desktop-theme
+ Exec=lxappearance
+-NotShowIn=GNOME;XFCE;
++NotShowIn=GNOME;MATE;XFCE;
+ StartupNotify=true
+ Categories=Settings;DesktopSettings;GTK;X-LXDE-Settings;
