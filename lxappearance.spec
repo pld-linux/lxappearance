@@ -17,7 +17,7 @@ Source0:	http://downloads.sourceforge.net/lxde/%{name}-%{version}.tar.xz
 # Source0-md5:	a67113681d9d0a6d936289909aed5782
 Patch0:		mate-desktop.patch
 URL:		http://wiki.lxde.org/en/LXAppearance
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 %{?with_gtk2:BuildRequires:	gtk+2-devel >= 2:2.12.0}
 %{?with_gtk3:BuildRequires:	gtk+3-devel}
 BuildRequires:	intltool
