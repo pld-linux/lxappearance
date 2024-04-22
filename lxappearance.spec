@@ -1,12 +1,12 @@
 #
 # Conditional build:
-%bcond_with	gtk3	# use GTK+3 instead of GTK+2
+%bcond_without	gtk3	# use GTK+3 instead of GTK+2
 
 Summary:	Desktop-independent theme switcher for GTK+
 Summary(pl.UTF-8):	Niezależny od środowiska przełącznik motywów dla GTK+
 Name:		lxappearance
 Version:	0.6.3
-Release:	2
+Release:	3
 License:	GPL v3
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/lxde/%{name}-%{version}.tar.xz
